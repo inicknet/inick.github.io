@@ -1,0 +1,28 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Nick McLarty Technologies
+email: info@inick.net
+address: >
+  1511 Texas Ave S #130
+  College Station, Texas 77840
+tel: 979-229-3449
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+github_username:  inicknet
+twitter_username: inicknet
+facebook_username: inicknet
+linkedin_username: nick-mclarty-technologies-llc
+copyright: Nick McLarty Technologies, LLC
+
+# Build settings
+markdown: kramdown
+
+# SASS settings
+sass:
+  sass_dir: /assets/css

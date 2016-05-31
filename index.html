@@ -1,0 +1,190 @@
+---
+intro:
+  header: Cybersecurity consulting and implementation for compliance-heavy organizations
+  subheader: >
+    Nick McLarty Technologies specializes in cyber and information security program reviews, 
+    assessing organizational compliance with industry and governmental standards, and developing comprehensive 
+    solutions to fully implement administrative, operational and technical controls to achieve full compliance 
+    with most common information security standards.
+  action: Learn More
+portfolio:
+  header: Portfolio of Services
+  featured:
+  - title: Compliance Assessments
+    content: >
+      We have the expertise to perform comprehensive compliance assessments against nearly any documented standard.
+    image_url: images/thumbs/compliance.jpg
+  - title: Cybersecurity Program Development
+    content: >
+      We will develop a customized, ready-to-implement cybersecurity program tailor-made to your organization's 
+      policy and operational requirements.
+    image_url: images/thumbs/program-dev.jpg
+  - title: Technical Gap Analysis
+    content: >
+      We can work with your staff to identify areas for improving line of business efficiency while maintaining 
+      compliance with applicable standards.
+    image_url: images/thumbs/refresh.jpg
+contact:
+  header: Get in Touch
+  subheader: >
+    The first step in pursuing an engagement is to contact us with a brief description of your organization 
+    and the work you are seeking. We will work with you to craft a custom-fit solution to meet your requirements.
+---
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>{{ site.title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="icon" href="images/logo.png" />
+	</head>
+	<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="#" class="image avatar"><img src="images/logo.png" alt="{{ site.title | append: " Logo" }}" /></a>
+				<h1>{{ site.title }}</h1>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="intro">
+						<header class="major">
+							<h2>{{ page.intro.header }}</h2>
+						</header>
+						<p>{{ page.intro.subheader }}</p>
+						<ul class="actions">
+							<li><a id="intro_action" class="button">{{ page.intro.action }}</a></li>
+						</ul>
+					</section>
+
+				<!-- Portfolio -->
+					<section id="portfolio">
+						<h2>{{ page.portfolio.header }}</h2>
+						<div class="row">
+							{% for feature in page.portfolio.featured %}
+							<article class="6u 12u$(xsmall) work-item">
+								<img src="{{ feature.image_url }}" alt="{{ feature.title }}" class="image fit thumb" />
+								<h3>{{ feature.title }}</h3>
+								<p>{{ feature.content }}</p>
+							</article>
+							{% endfor %}
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact">
+						<h2>{{ page.contact.header }}</h2>
+						<p>{{ page.contact.subheader }}</p>
+						<div class="row">
+							<div class="8u 12u$(small)">
+								<form method="post" action="javascript: postContactToGoogle()">
+									<div class="row uniform 50%">
+										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
+										<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="12u$"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+								</form>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</div>
+							<div class="4u$ 12u$(small)">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon fa-home"><span class="label">Address</span></h3>
+										{{ site.address | newline_to_br }}
+									</li>
+									<li>
+										<h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
+										{{ site.tel }}
+									</li>
+									<li>
+										<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
+										<a href="{{ site.email | prepend: "mailto:" }}">{{ site.email }}</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="{{ site.facebook_username | prepend: "https://facebook.com/" }}" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="{{ site.twitter_username | prepend: "https://twitter.com/" }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="{{ site.linkedin_username | prepend: "https://www.linkedin.com/company/" }}" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="{{ site.github_username | prepend: "https://github.com/" }}" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="{{ site.email | prepend: "mailto:" }}" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; {{ "now" | date: "%Y" }} {{ site.copyright }}</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+			$("#intro_action").click(function() {
+			    $('html, body').animate({
+			        scrollTop: $("#portfolio").offset().top
+			    }, 1000);
+			});
+			</script>
+			<script type="text/javascript">
+		    function validateEmail(email) {
+		        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		        return re.test(email);
+		    }
+		    function postContactToGoogle(){
+		        var name = $('#name').val();
+		        var email = $('#email').val();
+		        var message = $('#message').val();
+		        if ((name !== "") && (email !== "") && ((message !== "") && (validateEmail(email)))) {
+		            $.ajax({
+		                url: "https://docs.google.com/a/inick.net/forms/d/1-6NwN_8evTv0GlzECt7TsYBBXPcDThKWfWkDfo8-pKQ/formResponse",
+		                data: {"entry.1830793178" : name, "entry.999356201" : email, "entry.1976529005": message},
+		                type: "POST",
+		                dataType: "xml",
+		                statusCode: {
+		                    0: function (){
+		 
+		                        $('#name').val("");
+		                        $('#email').val("");
+		                        $('#message').val("");
+		                        //Success message
+		                    },
+		                    200: function (){
+		                        $('#name').val("");
+		                        $('#email').val("");
+		                        $('#message').val("");
+		                        //Success Message
+		                    }
+		                }
+		            });
+		        }
+		        else {
+		            //Error message
+		        }
+		    }
+			</script>
+
+	</body>
+</html>
