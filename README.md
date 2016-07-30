@@ -1,3 +1,3 @@
 # inick.github.io
 Nick McLarty Technologies Website
-Compiled using Jekyll, tested on GitHub, hosted on Media Temple
+Compiled using Jekyll, tested on GitHub, hosted on GitHub Pages
