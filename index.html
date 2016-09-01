@@ -142,28 +142,28 @@ contact:
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script type="text/javascript">
+
 			$("#intro_action").click(function() {
 			    $('html, body').animate({
 			        scrollTop: $("#portfolio").offset().top
 			    }, 1000);
 			});
+
 			</script>
 			<script type="text/javascript">
-		    function validateEmail(email) {
-		        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		        return re.test(email);
-		    }
 
-			var URL = '{{ site.email_api_url }}/contact'
+			var URL = '{{ site.email_api_url }}/contact';
 			 
 			$('#contact-form').submit(function (event) {
-			  event.preventDefault()
+			  event.preventDefault();
 			 
 			  var data = {
 			    name: $('#name-input').val(),
 			    email: $('#email-input').val(),
 			    message: $('#message-input').val()
 			  }
+
+			  console.log(data);
 			 
 			  $.ajax({
 			    type: 'POST',
