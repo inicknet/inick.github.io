@@ -100,6 +100,12 @@ contact:
 										</ul>
 									</div>
 								</form>
+								<div id="contact-form-success" style="visibility: hidden;">
+									<h2>Your form has been successfully submitted.</h2>
+								</div>
+								<div id="contact-form-failure" style="visibility: hidden;">
+									<h2>There was an error submitting your form.</h2>
+								</div>
 							</div>
 							<div class="4u$ 12u$(small)">
 								<ul class="labeled-icons">
@@ -172,10 +178,12 @@ contact:
 			    contentType: 'application/json',
 			    data: JSON.stringify(data),
 			    success: function () {
-			    	$('#contact-form').val('<h3>Your form has been submitted.</h3>');
+			    	$('#contact-form').hide();
+			    	$('#contact-form-success').show();
 			    },
 			    error: function () {
-			    	$('#contact-form').val('<h3>There was an error submitting your form.</h3>');
+			    	$('#contact-form').hide();
+			    	$('#contact-form-error').show();
 			    }
 			  })
 			})
