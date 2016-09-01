@@ -88,16 +88,18 @@ contact:
 						<p>{{ page.contact.subheader }}</p>
 						<div class="row">
 							<div class="8u 12u$(small)">
-								<form method="post" id="contact-form">
+								<form id="contact-form">
 									<div class="row uniform 50%">
 										<div class="6u 12u$(xsmall)"><input type="text" name="name" id="name-input" placeholder="Name" /></div>
 										<div class="6u$ 12u$(xsmall)"><input type="email" name="email" id="email-input" placeholder="Email" /></div>
 										<div class="12u$"><textarea name="message" id="message-input" placeholder="Message" rows="4"></textarea></div>
 									</div>
+									<div class="row uniform 50%">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+										</ul>
+									</div>
 								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
 							</div>
 							<div class="4u$ 12u$(small)">
 								<ul class="labeled-icons">
@@ -163,8 +165,6 @@ contact:
 			    message: $('#message-input').val()
 			  }
 
-			  console.log(data);
-			 
 			  $.ajax({
 			    type: 'POST',
 			    url: URL,
