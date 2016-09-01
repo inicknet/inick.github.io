@@ -26,3 +26,6 @@ markdown: kramdown
 # SASS settings
 sass:
   sass_dir: /assets/css
+
+# AWS API resource for contact form
+email_api_url: https://g9mqqc6ygk.execute-api.us-east-1.amazonaws.com/prod
